@@ -6,4 +6,16 @@ export default defineNuxtConfig({
   compatibilityDate: "2024-10-23",
   devtools: { enabled: true },
   modules: ["@nuxt/ui", "@nuxtjs/google-fonts"],
+
+  colorMode: {
+    preference: "light",
+  },
+
+  googleFonts: {
+    families: {
+      "Mochiy+Pop+One": true,
+    },
+    display: "swap",
+    text: "がんばりバランスシート",
+  },
 });
