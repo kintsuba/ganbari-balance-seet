@@ -27,7 +27,7 @@
                 'text-5xl': showOptions,
               }"
             >
-              10
+              {{ store.point }}
             </span>
             ポイント
           </p>
@@ -64,6 +64,7 @@
           :key="ganbari.name"
           :ganbari="ganbari"
           :selected="selected"
+          @click="clickOption(ganbari.point)"
         />
       </TransitionGroup>
     </main>
@@ -71,9 +72,14 @@
 </template>
 
 <script setup lang="ts">
+import { useLocalStorage } from "@vueuse/core";
 import type { Ganbari } from "~/types/ganbari";
-
+import type { State } from "~/types/state";
 type SelectOption = "ganbari" | "gohoubi" | undefined;
+
+const GanbariPointKey = "GANBARI_POINT_KEY";
+
+const store = useLocalStorage<State>(GanbariPointKey, { point: 0 });
 
 const selected = ref<SelectOption>(undefined);
 const selectedOptions = computed(() => {
@@ -95,6 +101,11 @@ const clickButton = (clicked: SelectOption) => {
   } else {
     selected.value = undefined;
   }
+};
+
+const clickOption = (point: number) => {
+  console.log(`point1: ${typeof store.value.point}`);
+  store.value.point += point;
 };
 
 const ganbaris = ref<Ganbari[]>([

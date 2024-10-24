@@ -3,6 +3,7 @@
     v
     class="cursor-pointer hover:bg-primary-50 hover:shadow-md"
     :ui="{ body: { base: 'h-32' }, footer: { base: 'min-h-16' } }"
+    @click="$emit('click')"
   >
     <p class="my-4 text-center text-xl">
       <span class="text-2xl">{{ ganbari?.name }}</span>
@@ -24,6 +25,10 @@ import type { Ganbari } from "~/types/ganbari";
 const props = defineProps<{
   ganbari?: Ganbari;
   selected?: "ganbari" | "gohoubi";
+}>();
+
+const emits = defineEmits<{
+  (e: "click"): void;
 }>();
 
 const isGanbari = computed(() => props.selected === "ganbari");
