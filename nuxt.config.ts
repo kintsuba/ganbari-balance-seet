@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     "@nuxtjs/google-fonts",
     "@nuxt/fonts",
     "@formkit/auto-animate/nuxt",
+    "@vueuse/nuxt",
   ],
 
   colorMode: {

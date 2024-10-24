@@ -18,5 +18,9 @@
     "nuxt": "^3.13.2",
     "tailwindcss-animate": "^1.0.7"
   },
-  "packageManager": "pnpm@8.8.0+sha1.9922e8b650d393700209ccd81e0ebdbcbe43b0d3"
+  "packageManager": "pnpm@8.8.0+sha1.9922e8b650d393700209ccd81e0ebdbcbe43b0d3",
+  "dependencies": {
+    "@vueuse/core": "^11.1.0",
+    "@vueuse/nuxt": "^11.1.0"
+  }
 }
