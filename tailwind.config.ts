@@ -6,6 +6,7 @@ export default <Partial<Config>>{
     extend: {
       fontFamily: {
         sans: [
+          "Mochiy Pop One",
           "Segoe UI",
           "Meiryo",
           "system-ui",
@@ -14,6 +15,7 @@ export default <Partial<Config>>{
           "sans-serif",
         ],
         display: [
+          "Mochiy Pop One",
           "Segoe UI",
           "Meiryo",
           "system-ui",
@@ -22,6 +24,7 @@ export default <Partial<Config>>{
           "sans-serif",
         ],
         body: [
+          "Mochiy Pop One",
           "Segoe UI",
           "Meiryo",
           "system-ui",

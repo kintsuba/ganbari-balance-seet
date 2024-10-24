@@ -16,6 +16,5 @@ export default defineNuxtConfig({
       "Mochiy+Pop+One": true,
     },
     display: "swap",
-    text: "がんばりバランスシート",
   },
 });
